@@ -8,7 +8,7 @@
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         :root {
-            --cream: #F4F0E8;a
+            --cream: #F4F0E8;
             --dark: #111418;
             --dark-mid: #1C2028;
             --blue: #2E4057;
@@ -16,6 +16,7 @@
             --muted: #7A8090;
             --green: #4CAF92;
             --green-light: #5FCFA5;
+            --card-bg: #0a0e14;
         }
         html { scroll-behavior: smooth; }
         body { font-family: 'DM Sans', sans-serif; background: var(--dark); color: var(--cream); overflow-x: hidden; }
@@ -52,7 +53,7 @@
 
         .hero-para {
             font-family: 'Cormorant Garamond', serif; font-size: clamp(15px,2.5vw,20px);
-            font-weight: 300; font-style: italic; color: rgba(95,207,165,0.8);
+            font-weight: 300; font-style: italic; color: rgba(95,207,165,0.9);
             margin-bottom: 20px; animation: fadeUp 0.8s 0.25s ease both;
         }
 
@@ -77,7 +78,7 @@
         .section-label::before { content: ''; display: block; width: 24px; height: 1px; background: var(--green); }
         .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px,5vw,50px); font-weight: 300; line-height: 1.15; color: var(--cream); margin-bottom: 20px; }
         .section-title em { font-style: italic; color: var(--green-light); }
-        .section-body { font-size: 16px; line-height: 1.85; color: rgba(244,240,232,0.65); }
+        .section-body { font-size: 16px; line-height: 1.85; color: rgba(244,240,232,0.85); }
 
         /* 1. ESPELHO DA REALIDADE */
         .espelho { background: var(--dark); }
@@ -85,7 +86,7 @@
             background: var(--dark-mid); border-left: 2px solid var(--green);
             padding: 32px 36px; margin-top: 48px; border-radius: 0 4px 4px 0;
             font-family: 'Cormorant Garamond', serif; font-size: clamp(18px,3vw,24px);
-            font-weight: 300; font-style: italic; line-height: 1.7; color: rgba(244,240,232,0.9);
+            font-weight: 300; font-style: italic; line-height: 1.7; color: rgba(244,240,232,0.95);
         }
         .espelho-intro strong { color: var(--green-light); font-weight: 400; }
 
@@ -93,7 +94,7 @@
         .espelho-ponto { display: flex; align-items: flex-start; gap: 20px; padding: 24px 28px; background: var(--dark-mid); transition: background 0.3s; }
         .espelho-ponto:hover { background: #1a2a24; }
         .espelho-ponto-icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
-        .espelho-ponto p { font-size: 15px; line-height: 1.7; color: rgba(244,240,232,0.8); }
+        .espelho-ponto p { font-size: 15px; line-height: 1.7; color: rgba(244,240,232,0.9); }
         .espelho-ponto p strong { color: var(--cream); font-weight: 500; }
 
         /* 2. CUSTO DE NÃO RESOLVER */
@@ -101,7 +102,7 @@
         .custo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 52px; }
         .custo-card { background: var(--dark); padding: 36px 32px; }
         .custo-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; color: var(--cream); margin-bottom: 10px; }
-        .custo-card p { font-size: 14px; line-height: 1.75; color: rgba(244,240,232,0.7); }
+        .custo-card p { font-size: 14px; line-height: 1.75; color: rgba(244,240,232,0.85); }
         .custo-numero {
             margin-top: 48px; padding: 40px; background: var(--dark-mid); text-align: center;
             border: 1px solid rgba(201,168,76,0.3); position: relative; overflow: hidden;
@@ -110,7 +111,7 @@
         .custo-numero > * { position: relative; z-index: 1; }
         .custo-numero-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
         .custo-numero-valor { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px,8vw,80px); font-weight: 300; color: var(--accent); line-height: 1; margin-bottom: 12px; }
-        .custo-numero-desc { font-size: 14px; color: rgba(244,240,232,0.6); max-width: 480px; margin: 0 auto; line-height: 1.6; }
+        .custo-numero-desc { font-size: 14px; color: rgba(244,240,232,0.8); max-width: 480px; margin: 0 auto; line-height: 1.6; }
 
         /* 3. SOLUÇÃO */
         .solucao { background: var(--dark-mid); }
@@ -119,7 +120,7 @@
         .solucao-item:hover { background: #16241e; }
         .solucao-entrega { padding: 28px 32px; border-right: 1px solid rgba(76,175,146,0.08); }
         .solucao-entrega h4 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; color: var(--cream); margin-bottom: 8px; }
-        .solucao-entrega p { font-size: 13px; color: rgba(244,240,232,0.7); line-height: 1.65; }
+        .solucao-entrega p { font-size: 13px; color: rgba(244,240,232,0.85); line-height: 1.65; }
         .solucao-resultado { padding: 28px 32px; display: flex; align-items: center; }
         .solucao-resultado p { font-size: 13px; color: var(--green-light); line-height: 1.65; font-style: italic; }
         .solucao-resultado p::before { content: '→ '; color: var(--green); font-style: normal; }
@@ -130,9 +131,9 @@
             margin-top: 48px; background: var(--dark-mid); border: 1px solid rgba(201,168,76,0.2);
             padding: 40px; border-radius: 4px;
         }
-        .nao-entra-intro { font-size: 14px; color: rgba(244,240,232,0.55); margin-bottom: 28px; line-height: 1.7; }
+        .nao-entra-intro { font-size: 14px; color: rgba(244,240,232,0.75); margin-bottom: 28px; line-height: 1.7; }
         .nao-entra-list { display: flex; flex-direction: column; gap: 12px; }
-        .nao-entra-item { display: flex; align-items: center; gap: 14px; font-size: 14px; color: rgba(244,240,232,0.7); }
+        .nao-entra-item { display: flex; align-items: center; gap: 14px; font-size: 14px; color: rgba(244,240,232,0.85); }
         .nao-entra-item::before { content: '—'; color: var(--accent); flex-shrink: 0; }
 
         /* 5. INVESTIMENTO */
@@ -147,7 +148,7 @@
         .inv-preco-moeda { font-size: 16px; color: var(--muted); }
         .inv-preco-valor { font-family: 'Cormorant Garamond', serif; font-size: 72px; font-weight: 300; color: var(--cream); line-height: 1; }
         .inv-preco-periodo { font-size: 14px; color: var(--muted); }
-        .inv-contrato { font-size: 13px; color: rgba(244,240,232,0.45); margin-top: 6px; }
+        .inv-contrato { font-size: 13px; color: rgba(244,240,232,0.65); margin-top: 6px; }
         .inv-body { padding: 36px 44px; }
         .inv-retorno {
             background: rgba(76,175,146,0.08); border-left: 2px solid var(--green);
@@ -157,9 +158,80 @@
         .inv-retorno strong { color: var(--cream); }
         .inv-validade {
             display: flex; align-items: center; gap: 10px;
-            font-size: 13px; color: rgba(244,240,232,0.45);
+            font-size: 13px; color: rgba(244,240,232,0.65);
         }
         .inv-validade::before { content: '⏳'; font-size: 14px; }
+
+        /* SERVIÇOS ADICIONAIS - BLOQUINHOS COM FUNDO PRETO */
+        .adicionais { background: var(--dark-mid); }
+        .adicionais-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+            margin-top: 48px;
+        }
+        .adicional-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(76,175,146,0.15);
+            border-radius: 6px;
+            padding: 28px 24px 24px;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .adicional-card:hover {
+            border-color: rgba(76,175,146,0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+        }
+        .adicional-tag {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--green);
+            margin-bottom: 16px;
+            padding: 4px 10px;
+            border: 1px solid rgba(76,175,146,0.3);
+            border-radius: 100px;
+            align-self: flex-start;
+            background: rgba(76,175,146,0.06);
+        }
+        .adicional-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            font-weight: 400;
+            color: #FFFFFF;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        .adicional-card p {
+            font-size: 13px;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.75);
+            flex: 1;
+            margin-bottom: 20px;
+        }
+        .adicional-preco {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            font-weight: 400;
+            color: #FFFFFF;
+            padding-top: 16px;
+            border-top: 1px solid rgba(76,175,146,0.12);
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
+        .adicional-preco span {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 11px;
+            font-weight: 400;
+            color: rgba(255,255,255,0.5);
+            letter-spacing: 0.5px;
+        }
 
         /* 6. PRÓXIMOS PASSOS */
         .passos { background: var(--dark-mid); }
@@ -169,7 +241,7 @@
         .passo-dot { width: 56px; height: 56px; border-radius: 50%; background: var(--dark); border: 1px solid rgba(76,175,146,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--green); position: relative; z-index: 1; }
         .passo-content { padding-top: 12px; flex: 1; }
         .passo-content h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; color: var(--cream); margin-bottom: 6px; }
-        .passo-content p { font-size: 14px; color: rgba(244,240,232,0.7); line-height: 1.7; }
+        .passo-content p { font-size: 14px; color: rgba(244,240,232,0.85); line-height: 1.7; }
         .passo-item.destaque .passo-dot { background: var(--green); color: #fff; border-color: var(--green); }
 
         /* CTA FINAL */
@@ -199,7 +271,7 @@
         .btn-duvida:hover { background: rgba(76,175,146,0.08); border-color: var(--green); }
 
         footer { background: #0a0e14; padding: 48px 24px; text-align: center; border-top: 1px solid rgba(76,175,146,0.08); }
-        footer p { font-size: 13px; color: rgba(122,128,144,0.5); }
+        footer p { font-size: 13px; color: rgba(122,128,144,0.6); }
         footer strong { color: var(--green); }
 
         @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
@@ -212,6 +284,7 @@
             .solucao-item { grid-template-columns: 1fr; }
             .solucao-entrega { border-right: none; border-bottom: 1px solid rgba(76,175,146,0.08); }
             .passos-list::before { display: none; }
+            .adicionais-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -257,11 +330,9 @@
             <h2 class="section-title">O que está <em>acontecendo hoje</em></h2>
         </div>
         <div class="espelho-intro reveal">
-            <!-- Cole aqui o resumo com as palavras que o cliente usou no diagnóstico -->
             Hoje o atendimento de <strong>[Nome da Empresa]</strong> está [descreva o cenário em 2–3 linhas com as palavras dele]. Você já percebeu que [principal dor identificada no diagnóstico] — e sabe que isso está custando mais do que parece.
         </div>
         <div class="espelho-pontos reveal">
-            <!-- Preencha com as dores reais identificadas no diagnóstico. Máx. 4 pontos. -->
             <div class="espelho-ponto">
                 <div class="espelho-ponto-icon">⚡</div>
                 <p><strong>[Dor 1]</strong> — [Descreva como isso se manifesta no dia a dia do cliente, com as palavras dele.]</p>
@@ -298,7 +369,6 @@
             </div>
         </div>
         <div class="custo-numero reveal">
-            <!-- Calcule com base no que ele te disse: ticket médio × estimativa de perdas/semana × 4 semanas -->
             <p class="custo-numero-label">Impacto mensal estimado em oportunidades não aproveitadas</p>
             <div class="custo-numero-valor">R$ [VALOR]</div>
             <p class="custo-numero-desc">Baseado no ticket médio de R$ [X] e na estimativa de [Y] atendimentos perdidos por semana que você me informou. Sem contar o custo de reputação.</p>
@@ -316,7 +386,6 @@
             <p class="section-body">Não vendemos horas. Entregamos resultados com escopo definido — para que você saiba exatamente o que está contratando e o que vai mudar.</p>
         </div>
         <div class="solucao-list reveal">
-            <!-- Adapte cada item ao que foi acordado no diagnóstico -->
             <div class="solucao-item">
                 <div class="solucao-entrega">
                     <h4>[Entrega 1]</h4>
@@ -368,7 +437,6 @@
         <div class="nao-entra-box reveal">
             <p class="nao-entra-intro">Para que a parceria funcione com clareza e sem surpresas, é importante definir o que não faz parte deste pacote. Qualquer item abaixo pode ser adicionado como serviço avulso — basta conversar.</p>
             <div class="nao-entra-list">
-                <!-- Adapte conforme o escopo negociado -->
                 <div class="nao-entra-item">Gestão de redes sociais e criação de conteúdo</div>
                 <div class="nao-entra-item">Atendimento fora do horário comercial acordado</div>
                 <div class="nao-entra-item">Suporte técnico de plataformas e sistemas</div>
@@ -398,7 +466,6 @@
             </div>
             <div class="inv-body">
                 <div class="inv-retorno">
-                    <!-- Use o número calculado na seção 2 -->
                     Considerando o impacto estimado de <strong>R$ [VALOR]</strong> em oportunidades não aproveitadas por mês, o retorno sobre esse investimento começa no primeiro mês de operação.
                 </div>
                 <div class="inv-validade">
@@ -409,66 +476,69 @@
     </div>
 </section>
 
-      <section class="adicionais" id="adicionais">
-        <div class="container">
-            <div class="reveal">
-                <p class="section-label">Serviços avulsos</p>
-                <h2 class="section-title">Setups e <em>adicionais estratégicos</em></h2>
-                <p class="section-body">Serviços pontuais para turbinar a estrutura da sua clínica. Taxa única, sem mensalidade.</p>
-            </div>
-            <div class="adicionais-grid reveal">
 
-                <!-- SETUP WHATSAPP BUSINESS -->
-                <div class="adicional-card">
-                    <span class="adicional-tag">Setup</span>
-                    <h3>WhatsApp Business Estratégico</h3>
-                    <p>Transformamos seu WhatsApp em funil de vendas: mensagens de saudação/ausência, etiquetas de organização e perfil otimizado.</p>
-                    <div class="adicional-preco">R$ 350<span>pagamento único</span></div>
-                </div>
-
-                <!-- CATÁLOGO WHATSAPP -->
-                <div class="adicional-card">
-                    <span class="adicional-tag">Setup</span>
-                    <h3>Catálogo do WhatsApp</h3>
-                    <p>Cadastro dos serviços da clínica com fotos profissionais, descrições persuasivas e links diretos.</p>
-                    <div class="adicional-preco">R$ 250<span>até 30 itens</span></div>
-                </div>
-
-                <!-- GOOGLE MEU NEGÓCIO -->
-                <div class="adicional-card">
-                    <span class="adicional-tag">Setup</span>
-                    <h3>Google Meu Negócio</h3>
-                    <p>Criação ou otimização da ficha no Google: palavras-chave, fotos, horários e botão de agendamento.</p>
-                    <div class="adicional-preco">R$ 300<span>pagamento único</span></div>
-                </div>
-
-                <!-- PLAYBOOK DE ATENDIMENTO -->
-                <div class="adicional-card">
-                    <span class="adicional-tag">Playbook</span>
-                    <h3>Scripts de Atendimento</h3>
-                    <p>Mapeamento da jornada do paciente + documento oficial com roteiros padronizados, FAQ, quebra de objeções e follow-up.</p>
-                    <div class="adicional-preco">R$ 450 – 600<span>taxa única</span></div>
-                </div>
-
-                <!-- CONFIGURAÇÃO CRM/AGENDAMENTO -->
-                <div class="adicional-card">
-                    <span class="adicional-tag">Setup</span>
-                    <h3>Sistema de Agendamento / CRM</h3>
-                    <p>Configuração completa do sistema que o cliente contratou (Trinks, Doctoralia ou CRM próprio).</p>
-                    <div class="adicional-preco">R$ 400 – 600<span>taxa única</span></div>
-                </div>
-
-                <!-- FORMULÁRIOS INTELIGENTES -->
-                <div class="adicional-card">
-                    <span class="adicional-tag">Digital</span>
-                    <h3>Formulários Inteligentes</h3>
-                    <p>Anamnese digital ou briefing no Google Forms/Typeform com a identidade visual da clínica.</p>
-                    <div class="adicional-preco">R$ 150 – 250<span>por formulário</span></div>
-                </div>
-
-            </div>
+<!-- ─── SERVIÇOS ADICIONAIS (BLOQUINHOS) ──────────── -->
+<section class="adicionais" id="adicionais">
+    <div class="container">
+        <div class="reveal">
+            <p class="section-label">Serviços avulsos</p>
+            <h2 class="section-title">Setups e <em>adicionais estratégicos</em></h2>
+            <p class="section-body">Serviços pontuais para turbinar a estrutura da sua clínica. Taxa única, sem mensalidade.</p>
         </div>
-    </section>
+        <div class="adicionais-grid reveal">
+
+            <!-- SETUP WHATSAPP BUSINESS -->
+            <div class="adicional-card">
+                <span class="adicional-tag">Setup</span>
+                <h3>WhatsApp Business Estratégico</h3>
+                <p>Transformamos seu WhatsApp em funil de vendas: mensagens de saudação/ausência, etiquetas de organização e perfil otimizado.</p>
+                <div class="adicional-preco">R$ 350<span>pagamento único</span></div>
+            </div>
+
+            <!-- CATÁLOGO WHATSAPP -->
+            <div class="adicional-card">
+                <span class="adicional-tag">Setup</span>
+                <h3>Catálogo do WhatsApp</h3>
+                <p>Cadastro dos serviços da clínica com fotos profissionais, descrições persuasivas e links diretos.</p>
+                <div class="adicional-preco">R$ 250<span>até 30 itens</span></div>
+            </div>
+
+            <!-- GOOGLE MEU NEGÓCIO -->
+            <div class="adicional-card">
+                <span class="adicional-tag">Setup</span>
+                <h3>Google Meu Negócio</h3>
+                <p>Criação ou otimização da ficha no Google: palavras-chave, fotos, horários e botão de agendamento.</p>
+                <div class="adicional-preco">R$ 300<span>pagamento único</span></div>
+            </div>
+
+            <!-- PLAYBOOK DE ATENDIMENTO -->
+            <div class="adicional-card">
+                <span class="adicional-tag">Playbook</span>
+                <h3>Scripts de Atendimento</h3>
+                <p>Mapeamento da jornada do paciente + documento oficial com roteiros padronizados, FAQ, quebra de objeções e follow-up.</p>
+                <div class="adicional-preco">R$ 450 – 600<span>taxa única</span></div>
+            </div>
+
+            <!-- CONFIGURAÇÃO CRM/AGENDAMENTO -->
+            <div class="adicional-card">
+                <span class="adicional-tag">Setup</span>
+                <h3>Sistema de Agendamento / CRM</h3>
+                <p>Configuração completa do sistema que o cliente contratou (Trinks, Doctoralia ou CRM próprio).</p>
+                <div class="adicional-preco">R$ 400 – 600<span>taxa única</span></div>
+            </div>
+
+            <!-- FORMULÁRIOS INTELIGENTES -->
+            <div class="adicional-card">
+                <span class="adicional-tag">Digital</span>
+                <h3>Formulários Inteligentes</h3>
+                <p>Anamnese digital ou briefing no Google Forms/Typeform com a identidade visual da clínica.</p>
+                <div class="adicional-preco">R$ 150 – 250<span>por formulário</span></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 
 <!-- ─── 6. PRÓXIMOS PASSOS ────────────────────────── -->
 <section class="passos">
