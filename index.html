@@ -19,9 +19,72 @@
             --card-bg: #0d1f18;
         }
         html { scroll-behavior: smooth; }
-        body { font-family: 'DM Sans', sans-serif; background: var(--dark); color: var(--cream); overflow-x: hidden; }
 
-        /* HERO */
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--dark);
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        /* ========== TEMAS DE ALTERNÂNCIA ========== */
+        .tema-escuro { background: var(--dark); color: var(--cream); }
+        .tema-escuro .section-label { color: var(--green); }
+        .tema-escuro .section-label::before { background: var(--green); }
+        .tema-escuro .section-title { color: var(--cream); }
+        .tema-escuro .section-title em { color: var(--green-light); }
+        .tema-escuro .section-body { color: rgba(244,240,232,0.85); }
+
+        .tema-escuro2 { background: #0d1a15; color: var(--cream); }
+        .tema-escuro2 .section-label { color: var(--green); }
+        .tema-escuro2 .section-label::before { background: var(--green); }
+        .tema-escuro2 .section-title { color: var(--cream); }
+        .tema-escuro2 .section-title em { color: var(--green-light); }
+        .tema-escuro2 .section-body { color: rgba(244,240,232,0.85); }
+
+        .tema-escuro3 { background: var(--dark-mid); color: var(--cream); }
+        .tema-escuro3 .section-label { color: var(--green); }
+        .tema-escuro3 .section-label::before { background: var(--green); }
+        .tema-escuro3 .section-title { color: var(--cream); }
+        .tema-escuro3 .section-title em { color: var(--green-light); }
+        .tema-escuro3 .section-body { color: rgba(244,240,232,0.85); }
+
+        .tema-escuro4 { background: var(--dark-mid); color: var(--cream); }
+        .tema-escuro4 .section-label { color: var(--green); }
+        .tema-escuro4 .section-label::before { background: var(--green); }
+        .tema-escuro4 .section-title { color: var(--cream); }
+        .tema-escuro4 .section-title em { color: var(--green-light); }
+        .tema-escuro4 .section-body { color: rgba(244,240,232,0.85); }
+
+        .tema-escuro5 { 
+            background: linear-gradient(135deg, #16241e, #0d1a15, var(--dark)); 
+            color: var(--cream); 
+            border-top: 1px solid rgba(76,175,146,0.15); 
+            border-bottom: 1px solid rgba(76,175,146,0.15); 
+        }
+        .tema-escuro5 .section-label { color: var(--green); }
+        .tema-escuro5 .section-label::before { background: var(--green); }
+        .tema-escuro5 .section-title { color: var(--cream); }
+        .tema-escuro5 .section-title em { color: var(--green-light); }
+        .tema-escuro5 .section-body { color: rgba(244,240,232,0.85); }
+
+        /* Creme: fundo #F4F0E8, texto escuro */
+        .tema-creme { background: var(--cream); color: var(--dark); }
+        .tema-creme .section-label { color: var(--green); }
+        .tema-creme .section-label::before { background: var(--green); }
+        .tema-creme .section-title { color: var(--dark); }
+        .tema-creme .section-title em { color: var(--green); }
+        .tema-creme .section-body { color: rgba(17,20,24,0.75); }
+
+        /* Creme dourado: fundo com tom dourado suave */
+        .tema-creme-dourado { background: linear-gradient(135deg, #F4F0E8 0%, #EDE6D5 50%, #F4F0E8 100%); color: var(--dark); }
+        .tema-creme-dourado .section-label { color: #9A7D32; }
+        .tema-creme-dourado .section-label::before { background: #9A7D32; }
+        .tema-creme-dourado .section-title { color: var(--dark); }
+        .tema-creme-dourado .section-title em { color: #9A7D32; }
+        .tema-creme-dourado .section-body { color: rgba(17,20,24,0.75); }
+
+        /* ========== HERO ========== */
         .hero {
             min-height: 100vh;
             display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -71,38 +134,35 @@
         .hero-scroll span { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
         .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--green), transparent); animation: scrollAnim 2s ease infinite; }
 
-        /* LAYOUT */
+        /* ========== LAYOUT BASE ========== */
         section { padding: 100px 24px; }
         .container { max-width: 900px; margin: 0 auto; }
-        .section-label { font-size: 11px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--green); margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
-        .section-label::before { content: ''; display: block; width: 24px; height: 1px; background: var(--green); }
-        .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px,5vw,50px); font-weight: 300; line-height: 1.15; color: var(--cream); margin-bottom: 20px; }
-        .section-title em { font-style: italic; color: var(--green-light); }
-        .section-body { font-size: 16px; line-height: 1.85; color: rgba(244,240,232,0.85); }
+        .section-label { font-size: 11px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+        .section-label::before { content: ''; display: block; width: 24px; height: 1px; }
+        .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px,5vw,50px); font-weight: 300; line-height: 1.15; margin-bottom: 20px; }
+        .section-title em { font-style: italic; }
+        .section-body { font-size: 16px; line-height: 1.85; }
 
-        /* 1. ESPELHO DA REALIDADE */
-        .espelho { background: var(--dark); }
+        /* ========== 1. ESPELHO DA REALIDADE (creme) ========== */
         .espelho-intro {
-            background: var(--dark-mid); border-left: 2px solid var(--green);
+            background: #fff; border-left: 2px solid var(--green);
             padding: 32px 36px; margin-top: 48px; border-radius: 0 4px 4px 0;
             font-family: 'Cormorant Garamond', serif; font-size: clamp(18px,3vw,24px);
-            font-weight: 300; font-style: italic; line-height: 1.7; color: rgba(244,240,232,0.95);
+            font-weight: 300; font-style: italic; line-height: 1.7; color: rgba(17,20,24,0.9);
         }
-        .espelho-intro strong { color: var(--green-light); font-weight: 400; }
-
+        .espelho-intro strong { color: var(--green); font-weight: 400; }
         .espelho-pontos { margin-top: 36px; display: flex; flex-direction: column; gap: 2px; }
-        .espelho-ponto { display: flex; align-items: flex-start; gap: 20px; padding: 24px 28px; background: var(--dark-mid); transition: background 0.3s; }
-        .espelho-ponto:hover { background: #1a2a24; }
+        .tema-creme .espelho-ponto { display: flex; align-items: flex-start; gap: 20px; padding: 24px 28px; background: #fff; transition: background 0.3s; border: 1px solid rgba(76,175,146,0.1); border-radius: 4px; }
+        .tema-creme .espelho-ponto:hover { background: #f8f6f1; }
         .espelho-ponto-icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
-        .espelho-ponto p { font-size: 15px; line-height: 1.7; color: rgba(244,240,232,0.9); }
-        .espelho-ponto p strong { color: var(--cream); font-weight: 500; }
+        .tema-creme .espelho-ponto p { font-size: 15px; line-height: 1.7; color: rgba(17,20,24,0.85); }
+        .tema-creme .espelho-ponto p strong { color: var(--dark); font-weight: 500; }
 
-        /* 2. CUSTO DE NÃO RESOLVER */
-        .custo { background: #0d1a15; border-top: 1px solid rgba(76,175,146,0.15); border-bottom: 1px solid rgba(76,175,146,0.15); }
+        /* ========== 2. CUSTO DE NÃO RESOLVER (verde escuro original) ========== */
         .custo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 52px; }
-        .custo-card { background: var(--dark); padding: 36px 32px; }
+        .tema-escuro2 .custo-card { background: var(--dark); padding: 36px 32px; }
         .custo-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; color: var(--cream); margin-bottom: 10px; }
-        .custo-card p { font-size: 14px; line-height: 1.75; color: rgba(244,240,232,0.85); }
+        .tema-escuro2 .custo-card p { font-size: 14px; line-height: 1.75; color: rgba(244,240,232,0.85); }
         .custo-numero {
             margin-top: 48px; padding: 40px; background: var(--dark-mid); text-align: center;
             border: 1px solid rgba(201,168,76,0.3); position: relative; overflow: hidden;
@@ -113,22 +173,20 @@
         .custo-numero-valor { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px,8vw,80px); font-weight: 300; color: var(--accent); line-height: 1; margin-bottom: 12px; }
         .custo-numero-desc { font-size: 14px; color: rgba(244,240,232,0.8); max-width: 480px; margin: 0 auto; line-height: 1.6; }
 
-        /* 3. SOLUÇÃO */
-        .solucao { background: var(--dark-mid); }
+        /* ========== 3. SOLUÇÃO (creme dourado) ========== */
         .solucao-list { margin-top: 52px; display: flex; flex-direction: column; gap: 2px; }
-        .solucao-item { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: var(--dark); overflow: hidden; transition: background 0.3s; }
-        .solucao-item:hover { background: #16241e; }
-        .solucao-entrega { padding: 28px 32px; border-right: 1px solid rgba(76,175,146,0.08); }
-        .solucao-entrega h4 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; color: var(--cream); margin-bottom: 8px; }
-        .solucao-entrega p { font-size: 13px; color: rgba(244,240,232,0.85); line-height: 1.65; }
+        .tema-creme-dourado .solucao-item { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: #fff; overflow: hidden; transition: background 0.3s; border: 1px solid rgba(201,168,76,0.15); border-radius: 4px; }
+        .tema-creme-dourado .solucao-item:hover { background: #faf8f2; }
+        .solucao-entrega { padding: 28px 32px; border-right: 1px solid rgba(201,168,76,0.12); }
+        .tema-creme-dourado .solucao-entrega h4 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 400; color: var(--dark); margin-bottom: 8px; }
+        .tema-creme-dourado .solucao-entrega p { font-size: 13px; color: rgba(17,20,24,0.8); line-height: 1.65; }
         .solucao-resultado { padding: 28px 32px; display: flex; align-items: center; }
-        .solucao-resultado p { font-size: 13px; color: var(--green-light); line-height: 1.65; font-style: italic; }
-        .solucao-resultado p::before { content: '→ '; color: var(--green); font-style: normal; }
+        .tema-creme-dourado .solucao-resultado p { font-size: 13px; color: var(--green); line-height: 1.65; font-style: italic; }
+        .tema-creme-dourado .solucao-resultado p::before { content: '→ '; color: #9A7D32; font-style: normal; }
 
-        /* 4. O QUE NÃO ENTRA */
-        .nao-entra { background: var(--dark); }
+        /* ========== 4. O QUE NÃO ENTRA (dark-mid) ========== */
         .nao-entra-box {
-            margin-top: 48px; background: var(--dark-mid); border: 1px solid rgba(201,168,76,0.2);
+            margin-top: 48px; background: var(--dark); border: 1px solid rgba(201,168,76,0.2);
             padding: 40px; border-radius: 4px;
         }
         .nao-entra-intro { font-size: 14px; color: rgba(244,240,232,0.75); margin-bottom: 28px; line-height: 1.7; }
@@ -136,34 +194,32 @@
         .nao-entra-item { display: flex; align-items: center; gap: 14px; font-size: 14px; color: rgba(244,240,232,0.85); }
         .nao-entra-item::before { content: '—'; color: var(--accent); flex-shrink: 0; }
 
-        /* 5. INVESTIMENTO */
-        .investimento { background: linear-gradient(135deg, #16241e, #0d1a15, var(--dark)); }
+        /* ========== 5. INVESTIMENTO (creme) ========== */
         .inv-card {
-            margin-top: 52px; background: var(--dark-mid); border: 1px solid rgba(76,175,146,0.25);
-            overflow: hidden;
+            margin-top: 52px; background: #fff; border: 1px solid rgba(76,175,146,0.2);
+            overflow: hidden; border-radius: 6px;
         }
         .inv-header { padding: 40px 44px 32px; border-bottom: 1px solid rgba(76,175,146,0.1); }
-        .inv-pacote-nome { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--green); margin-bottom: 12px; }
+        .tema-creme .inv-pacote-nome { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--green); margin-bottom: 12px; }
         .inv-preco { display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px; }
-        .inv-preco-moeda { font-size: 16px; color: var(--muted); }
-        .inv-preco-valor { font-family: 'Cormorant Garamond', serif; font-size: 72px; font-weight: 300; color: var(--cream); line-height: 1; }
-        .inv-preco-periodo { font-size: 14px; color: var(--muted); }
-        .inv-contrato { font-size: 13px; color: rgba(244,240,232,0.65); margin-top: 6px; }
+        .inv-preco-moeda { font-size: 16px; color: #7A8090; }
+        .tema-creme .inv-preco-valor { font-family: 'Cormorant Garamond', serif; font-size: 72px; font-weight: 300; color: var(--dark); line-height: 1; }
+        .inv-preco-periodo { font-size: 14px; color: #7A8090; }
+        .tema-creme .inv-contrato { font-size: 13px; color: rgba(17,20,24,0.6); margin-top: 6px; }
         .inv-body { padding: 36px 44px; }
         .inv-retorno {
-            background: rgba(76,175,146,0.08); border-left: 2px solid var(--green);
+            background: rgba(76,175,146,0.06); border-left: 2px solid var(--green);
             padding: 20px 24px; margin-bottom: 36px;
-            font-size: 14px; color: var(--green-light); line-height: 1.7;
+            font-size: 14px; color: rgba(17,20,24,0.8); line-height: 1.7;
         }
-        .inv-retorno strong { color: var(--cream); }
-        .inv-validade {
+        .inv-retorno strong { color: var(--dark); }
+        .tema-creme .inv-validade {
             display: flex; align-items: center; gap: 10px;
-            font-size: 13px; color: rgba(244,240,232,0.65);
+            font-size: 13px; color: rgba(17,20,24,0.6);
         }
         .inv-validade::before { content: '⏳'; font-size: 14px; }
 
-        /* SERVIÇOS ADICIONAIS - BLOQUINHOS COM FUNDO VERDE-ESCURO */
-        .adicionais { background: var(--dark-mid); }
+        /* ========== SERVIÇOS ADICIONAIS (dark-mid original) ========== */
         .adicionais-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -233,18 +289,17 @@
             letter-spacing: 0.5px;
         }
 
-        /* 6. PRÓXIMOS PASSOS */
-        .passos { background: var(--dark-mid); }
+        /* ========== 6. PRÓXIMOS PASSOS (creme dourado) ========== */
         .passos-list { margin-top: 56px; position: relative; }
-        .passos-list::before { content: ''; position: absolute; left: 27px; top: 0; bottom: 0; width: 1px; background: linear-gradient(to bottom, var(--green), transparent); }
+        .passos-list::before { content: ''; position: absolute; left: 27px; top: 0; bottom: 0; width: 1px; background: linear-gradient(to bottom, #9A7D32, transparent); }
         .passo-item { display: flex; gap: 36px; padding: 0 0 44px 0; }
-        .passo-dot { width: 56px; height: 56px; border-radius: 50%; background: var(--dark); border: 1px solid rgba(76,175,146,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--green); position: relative; z-index: 1; }
+        .passo-dot { width: 56px; height: 56px; border-radius: 50%; background: #fff; border: 1px solid rgba(154,125,50,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #9A7D32; position: relative; z-index: 1; }
         .passo-content { padding-top: 12px; flex: 1; }
-        .passo-content h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; color: var(--cream); margin-bottom: 6px; }
-        .passo-content p { font-size: 14px; color: rgba(244,240,232,0.85); line-height: 1.7; }
+        .tema-creme-dourado .passo-content h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; color: var(--dark); margin-bottom: 6px; }
+        .tema-creme-dourado .passo-content p { font-size: 14px; color: rgba(17,20,24,0.75); line-height: 1.7; }
         .passo-item.destaque .passo-dot { background: var(--green); color: #fff; border-color: var(--green); }
 
-        /* CTA FINAL */
+        /* ========== CTA FINAL ========== */
         .cta-final {
             text-align: center; padding: 120px 24px;
             background: radial-gradient(ellipse 80% 60% at 50% 50%, #1a2a24 0%, #0d1a15 40%, var(--dark) 70%);
@@ -290,7 +345,7 @@
 </head>
 <body>
 
-<!-- ─── HERO ─────────────────────────────────────── -->
+<!-- ─── HERO (gradiente escuro) ───────────────────── -->
 <section class="hero">
     <div class="hero-badge">Proposta Personalizada · MOVARE</div>
     <div class="hero-logo">
@@ -322,8 +377,8 @@
 </section>
 
 
-<!-- ─── 1. ESPELHO DA REALIDADE ───────────────────── -->
-<section class="espelho">
+<!-- ─── 1. ESPELHO DA REALIDADE (creme) ───────────── -->
+<section class="espelho tema-creme">
     <div class="container">
         <div class="reveal">
             <p class="section-label">01 · O cenário atual</p>
@@ -350,8 +405,8 @@
 </section>
 
 
-<!-- ─── 2. CUSTO DE NÃO RESOLVER ─────────────────── -->
-<section class="custo">
+<!-- ─── 2. CUSTO DE NÃO RESOLVER (verde escuro) ───── -->
+<section class="custo tema-escuro2">
     <div class="container">
         <div class="reveal">
             <p class="section-label">02 · O custo do problema</p>
@@ -377,8 +432,8 @@
 </section>
 
 
-<!-- ─── 3. A SOLUÇÃO ──────────────────────────────── -->
-<section class="solucao">
+<!-- ─── 3. SOLUÇÃO (creme dourado) ─────────────────── -->
+<section class="solucao tema-creme-dourado">
     <div class="container">
         <div class="reveal">
             <p class="section-label">03 · A solução</p>
@@ -427,8 +482,8 @@
 </section>
 
 
-<!-- ─── 4. O QUE NÃO ENTRA ───────────────────────── -->
-<section class="nao-entra">
+<!-- ─── 4. O QUE NÃO ENTRA (dark-mid) ─────────────── -->
+<section class="nao-entra tema-escuro3">
     <div class="container">
         <div class="reveal">
             <p class="section-label">04 · Limites do escopo</p>
@@ -447,8 +502,8 @@
 </section>
 
 
-<!-- ─── 5. INVESTIMENTO ───────────────────────────── -->
-<section class="investimento">
+<!-- ─── 5. INVESTIMENTO (creme) ───────────────────── -->
+<section class="investimento tema-creme">
     <div class="container">
         <div class="reveal">
             <p class="section-label">05 · Investimento</p>
@@ -477,8 +532,8 @@
 </section>
 
 
-<!-- ─── SERVIÇOS ADICIONAIS (BLOQUINHOS) ──────────── -->
-<section class="adicionais" id="adicionais">
+<!-- ─── SERVIÇOS ADICIONAIS (dark-mid) ─────────────── -->
+<section class="adicionais tema-escuro4" id="adicionais">
     <div class="container">
         <div class="reveal">
             <p class="section-label">Serviços avulsos</p>
@@ -487,7 +542,6 @@
         </div>
         <div class="adicionais-grid reveal">
 
-            <!-- SETUP WHATSAPP BUSINESS -->
             <div class="adicional-card">
                 <span class="adicional-tag">Setup</span>
                 <h3>WhatsApp Business Estratégico</h3>
@@ -495,7 +549,6 @@
                 <div class="adicional-preco">R$ 350<span>pagamento único</span></div>
             </div>
 
-            <!-- CATÁLOGO WHATSAPP -->
             <div class="adicional-card">
                 <span class="adicional-tag">Setup</span>
                 <h3>Catálogo do WhatsApp</h3>
@@ -503,7 +556,6 @@
                 <div class="adicional-preco">R$ 250<span>até 30 itens</span></div>
             </div>
 
-            <!-- GOOGLE MEU NEGÓCIO -->
             <div class="adicional-card">
                 <span class="adicional-tag">Setup</span>
                 <h3>Google Meu Negócio</h3>
@@ -511,7 +563,6 @@
                 <div class="adicional-preco">R$ 300<span>pagamento único</span></div>
             </div>
 
-            <!-- PLAYBOOK DE ATENDIMENTO -->
             <div class="adicional-card">
                 <span class="adicional-tag">Playbook</span>
                 <h3>Scripts de Atendimento</h3>
@@ -519,7 +570,6 @@
                 <div class="adicional-preco">R$ 450 – 600<span>taxa única</span></div>
             </div>
 
-            <!-- CONFIGURAÇÃO CRM/AGENDAMENTO -->
             <div class="adicional-card">
                 <span class="adicional-tag">Setup</span>
                 <h3>Sistema de Agendamento / CRM</h3>
@@ -527,7 +577,6 @@
                 <div class="adicional-preco">R$ 400 – 600<span>taxa única</span></div>
             </div>
 
-            <!-- FORMULÁRIOS INTELIGENTES -->
             <div class="adicional-card">
                 <span class="adicional-tag">Digital</span>
                 <h3>Formulários Inteligentes</h3>
@@ -540,8 +589,8 @@
 </section>
 
 
-<!-- ─── 6. PRÓXIMOS PASSOS ────────────────────────── -->
-<section class="passos">
+<!-- ─── 6. PRÓXIMOS PASSOS (creme dourado) ─────────── -->
+<section class="passos tema-creme-dourado">
     <div class="container">
         <div class="reveal">
             <p class="section-label">06 · Próximos passos</p>
@@ -588,8 +637,8 @@
         <h2>Pronto para<br><em>resolver isso de vez?</em></h2>
         <p>Qualquer dúvida antes de aceitar, é só chamar. Estou à disposição.</p>
         <div class="cta-buttons">
-            <a href="https://wa.me/5571983136600?text=Ol%C3%A1%2C+aceito+a+proposta+da+MOVARE" class="btn-aceitar">
-                Aceitar proposta
+            <a href="https://wa.me/5571983136600?text=Ol%C3%A1%2C+aceito+a+proposta+da+MOVARE" class="btn-avançar">
+                Quero avançar
             </a>
             <a href="https://wa.me/5571983136600" class="btn-duvida">
                 Tenho uma dúvida
